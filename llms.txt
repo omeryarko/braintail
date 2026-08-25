@@ -1,0 +1,47 @@
+# Braintail
+
+> Braintail is Omer Yarkowich's brand strategy practice for iGaming B2B — brand reviews, positioning lessons, and differentiation strategies. It operates as a sub-brand of [Positive Constraint](https://positiveconstraint.com). This site is agent-first: every page is served as clean markdown with structured frontmatter. Human visitors are directed to [positiveconstraint.com/braintail](https://positiveconstraint.com/braintail/) for the full visual experience.
+
+## The Method
+
+- [The Braintail Method](/method): Your story's ability to travel far and fast is its strongest advantage over sales-driven, in-person growth. The four-step method Braintail uses to create stories that stand out.
+- [Brand Plays](/brand-plays): Different categories in iGaming B2B have different brand plays. After nearly 20 brand reviews, the patterns are clear — and they change what it means to stand out.
+
+## Presents — Commercial Showcases
+
+- [CSB Group](/presents/csb-group): Malta's 360° corporate service provider — always one step ahead. Zero client attrition, billion-euro M&A experience, multi-jurisdictional regulatory trust.
+- [Z-Gaming](/presents/z-gaming): The lean-to-operate and quick-to-break-even casino platform. 150+ brands across Southeast Asia, built for media-strong teams in emerging markets.
+- [Tal Ron](/presents/tal-ron): The gaming lawyer from Tel Aviv — 23 years of experience, five degrees, a reality bender and community builder.
+
+## Brand Reviews
+
+- [155's Milking Machines](/reviews/155-milking-machines): A distinct game company streaming live chaos games 24/7, but a stronger narrative could make it a sensation.
+- [Bazoom's Cognitive Gap](/reviews/bazoom-cognitive-gap): Being recognized isn't the same as standing out. Bazoom's differentiators stay untranslated — a cognitive gap that leaves money on the table.
+- [Bettorify Two-Story Problem](/reviews/bettorify-two-story-problem): Bettorify splits its chips between two stories and two audiences, giving everything it has to neither.
+- [Blask's Identity Crisis](/reviews/blask-identity-crisis): What do you do when you can't or won't focus on a single target audience? Blask's identity crisis shows the cost of refusing to pick.
+- [CoinsPaid's Double Edge](/reviews/coinspaid-double-edge): An unfair advantage made CoinsPaid the leading crypto payments processor. But as stablecoins become financial plumbing, the same advantage could become its double edge.
+- [Elantil's Blue Moon](/reviews/elantil-blue-moon): A-team veterans rethought how platforms should be built and created a new category. But instead of leveraging this blue moon, Elantil keeps it quiet.
+- [Endorphina's Empty Stage](/reviews/endorphina-empty-stage): Hard to miss with viral booth stunts. But when the audience quiets and the spotlight hits the stage, who's there?
+- [finera.'s Buried Message](/reviews/finera-buried-message): finera. spent millions building a premium brand, then played down its strongest message.
+- [Finnplay's Missing Ingredient](/reviews/finnplay-missing-ingredient): The compliance story is true, valuable, and differentiated — but not compelling. It's missing the ingredient that makes it spread.
+- [Heroes of Missed Opportunities](/reviews/heroes-of-missed-opportunities): A very short time window when operators are open to buying a new CRM. A look at the missed opportunities that keep brands invisible.
+- [Inpay's Ironic Blind Spot](/reviews/inpay-blind-spot): iGaming Payouts can send withdrawals to almost any bank account in under 5 minutes — no one comes close. So why isn't it growing?
+- [Into the Void](/reviews/into-the-void): How many iGaming B2C operators are there? The distinct business entities deciding whether to notice you at all.
+- [ISX is Lost in Translation](/reviews/isx-is-lost-in-translation): ISX's financial stack offers top-tier operators certainty through depth, but the messaging doesn't move prospects to act.
+- [Maincard's Open Invitation](/reviews/maincard-open-invitation): The 'Shopify for iGaming' — but by positioning around speed instead of ease, it leaves the position open for competitors.
+- [MyAffiliates Guardian of Truth](/reviews/myaffiliates-guardian-of-truth): Trust made it category leader. But change is coming, and trust alone is no longer enough.
+- [Neosurf the APM for Careful Wagers](/reviews/neosurf-careful-wagers-apm): Neosurf's story remains elusive despite real effort. The solution might lie in rethinking what a payment method can be.
+- [NLA's Makeshift Story](/reviews/nla-makeshift-story): A strong product with a crippling story. Getting a license is one step; telling the story that makes it matter is another.
+- [Passover's Kabbalistic Brand Ritual](/reviews/passover-kabbalistic-brand-ritual): Passover's unchanging rituals hold a lesson about building brands that last through generations.
+- [Platipus 50 Shades of White](/reviews/platipus-50-shades-of-white): Platipus could promote fair play with passion and conviction. But unless they start preaching, they risk fading into a field of white.
+- [Standing Out in a Saturated Market](/reviews/valentina-bagniya-interview): SOFTSWISS CMO Valentina Bagniya on why brand is now the competitive advantage.
+- [Vegangster Beans of Greatness](/reviews/vegangster-beans-of-greatness): An iGaming platform built for the Uber generation. They have the beans of greatness; they just need to plant them.
+- [Yaspa's Product Outshines Its Story](/reviews/yaspa-product-outshines-its-story): If you've got a strong differentiator, flaunt it. Yaspa's product is smarter than its story.
+- [You're Not Alea](/reviews/youre-not-alea): You don't have the budget to be as flashy and loud. But Alea's strategy has a flaw you can use.
+
+## About
+
+Braintail is a practice by [Omer Yarkowich](https://positiveconstraint.com/ideas/about/) — finding the core constraint at the center of a brand problem and turning it into a story that stands out.
+
+- Human site: [positiveconstraint.com/braintail](https://positiveconstraint.com/braintail/)
+- Contact: [positiveconstraint.com/ideas/contact](https://positiveconstraint.com/ideas/contact/)

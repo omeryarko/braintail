@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Braintail — Agent-First Brand Strategy for iGaming B2B</title>
+<meta name="description" content="Braintail is an agent-first site. Agents get clean markdown. Humans get the full experience at positiveconstraint.com/braintail.">
+<link rel="canonical" href="https://braintail.ai/">
+<meta property="og:title" content="Braintail — Brand Strategy for iGaming B2B">
+<meta property="og:description" content="Brand reviews, positioning lessons, and differentiation strategies for iGaming B2B companies.">
+<meta property="og:url" content="https://braintail.ai/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a;
+  --fg: #e5e5e5;
+  --fg-dim: #737373;
+  --accent: #5B8DEF;
+  --border: #262626;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fafafa;
+    --fg: #171717;
+    --fg-dim: #737373;
+    --border: #e5e5e5;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-display);
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+.container { max-width: 640px; }
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+.tagline {
+  font-size: 1.1rem;
+  color: var(--fg-dim);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.agent-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: var(--border);
+  color: var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+.explanation {
+  font-size: 0.95rem;
+  color: var(--fg-dim);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.explanation code {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: var(--border);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.links a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: border-color 0.15s;
+}
+.links a:hover { border-color: var(--accent); }
+.links a .label { font-weight: 600; }
+.links a .desc { color: var(--fg-dim); font-size: 0.85rem; }
+footer {
+  font-size: 0.8rem;
+  color: var(--fg-dim);
+  margin-top: 2rem;
+}
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="agent-badge">AGENT-FIRST SITE</div>
+  <h1>Braintail</h1>
+  <p class="tagline">Brand strategy for iGaming B2B — brand reviews, positioning lessons, and differentiation strategies.</p>
+
+  <div class="explanation">
+    <p>This site is designed for AI agents. Every page is served as clean markdown with structured YAML frontmatter. Agents requesting <code>text/markdown</code> or <code>text/plain</code> receive raw content directly.</p>
+    <p style="margin-top: 0.5rem;">Start at <code><a href="/llms.txt" style="color: var(--accent);">/llms.txt</a></code> for the full content index.</p>
+  </div>
+
+  <div class="links">
+    <a href="https://positiveconstraint.com/braintail/">
+      <span class="label">Visit the human site &rarr;</span><br>
+      <span class="desc">Full visual experience at positiveconstraint.com/braintail</span>
+    </a>
+    <a href="/llms.txt">
+      <span class="label">llms.txt &rarr;</span><br>
+      <span class="desc">Agent content index — all pages, structured for machines</span>
+    </a>
+  </div>
+
+  <footer>
+    A practice by <a href="https://positiveconstraint.com/ideas/about/">Omer Yarkowich</a> &middot; <a href="https://positiveconstraint.com/">Positive Constraint</a>
+  </footer>
+</div>
+</body>
+</html>

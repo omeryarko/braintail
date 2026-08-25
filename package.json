@@ -1,0 +1,14 @@
+{
+  "name": "braintail",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev --local"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250815.0",
+    "typescript": "^5.7.0",
+    "wrangler": "^4.0.0"
+  }
+}

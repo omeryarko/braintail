@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "braintail",
+  "compatibility_date": "2026-08-26",
+  "observability": {
+    "enabled": true
+  },
+  "main": "worker/index.ts",
+  "assets": {
+    "directory": "site"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
