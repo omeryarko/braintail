@@ -6,10 +6,8 @@
     "enabled": true
   },
   "main": "worker/index.ts",
-  "assets": {
-    "directory": "site"
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
+  "routes": [
+    { "pattern": "braintail.ai/*", "zone_name": "braintail.ai" },
+    { "pattern": "www.braintail.ai/*", "zone_name": "braintail.ai" }
   ]
 }

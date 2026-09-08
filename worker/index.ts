@@ -1,120 +1,55 @@
-interface Env {
-	ASSETS: Fetcher;
-}
+const POSCON = 'https://positiveconstraint.com';
 
-const HUMAN_URL = 'https://positiveconstraint.com/braintail';
-
-const AGENT_SIGNALS = [
-	'text/markdown',
-	'text/plain',
-	'application/json',
-];
-
-const AGENT_UA_PATTERNS = [
-	/claude/i,
-	/chatgpt/i,
-	/gptbot/i,
-	/openai/i,
-	/anthropic/i,
-	/perplexity/i,
-	/cohere/i,
-	/bingbot/i,
-	/googlebot/i,
-	/google-extended/i,
-	/meta-externalagent/i,
-	/ia_archiver/i,
-	/ccbot/i,
-	/amazonbot/i,
-	/bytespider/i,
-	/applebot/i,
-	/facebookexternalhit/i,
-	/twitterbot/i,
-	/linkedinbot/i,
-];
-
-function isAgent(request: Request): boolean {
-	const ua = request.headers.get('user-agent') || '';
-	if (AGENT_UA_PATTERNS.some(p => p.test(ua))) return true;
-
-	const accept = request.headers.get('accept') || '';
-	if (accept.includes('text/markdown')) return true;
-
-	if (!accept.includes('text/html') && AGENT_SIGNALS.some(s => accept.includes(s))) return true;
-
-	return false;
-}
-
-function resolvePath(pathname: string): string {
-	let path = pathname.replace(/\/+$/, '') || '/';
-
-	if (path === '/') return '/llms.txt';
-	if (path === '/llms.txt' || path === '/robots.txt' || path === '/sitemap.xml') return path;
-
-	if (!path.endsWith('.md')) path += '.md';
-
-	if (path.startsWith('/')) path = '/site' + path;
-
-	return path;
-}
+const REDIRECT_MAP: Record<string, string> = {
+	'/': '/braintail/',
+	'/method': '/braintail/the-braintail-method/',
+	'/brand-plays': '/braintail/brand-plays/',
+	'/llms.txt': '/llms.txt',
+	'/presents/csb-group': '/braintail/csb-group/',
+	'/presents/z-gaming': '/braintail/z-gaming/',
+	'/presents/tal-ron': '/braintail/tal-ron/',
+	'/reviews/155-milking-machines': '/braintail/155-milking-machines/',
+	'/reviews/bazoom-cognitive-gap': '/braintail/bazoom-cognitive-gap/',
+	'/reviews/bettorify-two-story-problem': '/braintail/bettorify-two-story-problem/',
+	'/reviews/blask-identity-crisis': '/braintail/blask-identity-crisis/',
+	'/reviews/coinspaid-double-edge': '/braintail/coinspaid-double-edge/',
+	'/reviews/elantil-blue-moon': '/braintail/elantil-blue-moon/',
+	'/reviews/endorphina-empty-stage': '/braintail/endorphina-empty-stage/',
+	'/reviews/finera-buried-message': '/braintail/finera-buried-message/',
+	'/reviews/finnplay-missing-ingredient': '/braintail/finnplay-missing-ingredient/',
+	'/reviews/heroes-of-missed-opportunities': '/braintail/heroes-of-missed-opportunities/',
+	'/reviews/inpay-blind-spot': '/braintail/inpay-blind-spot/',
+	'/reviews/into-the-void': '/braintail/into-the-void/',
+	'/reviews/isx-is-lost-in-translation': '/braintail/isx-is-lost-in-translation/',
+	'/reviews/maincard-open-invitation': '/braintail/maincard-open-invitation/',
+	'/reviews/myaffiliates-guardian-of-truth': '/braintail/myaffiliates-guardian-of-truth/',
+	'/reviews/neosurf-careful-wagers-apm': '/braintail/neosurf-careful-wagers-apm/',
+	'/reviews/nla-makeshift-story': '/braintail/nla-makeshift-story/',
+	'/reviews/passover-kabbalistic-brand-ritual': '/braintail/passover-kabbalistic-brand-ritual/',
+	'/reviews/platipus-50-shades-of-white': '/braintail/platipus-50-shades-of-white/',
+	'/reviews/valentina-bagniya-interview': '/braintail/valentina-bagniya-interview/',
+	'/reviews/vegangster-beans-of-greatness': '/braintail/vegangster-beans-of-greatness/',
+	'/reviews/yaspa-product-outshines-its-story': '/braintail/yaspa-product-outshines-its-story/',
+	'/reviews/youre-not-alea': '/braintail/youre-not-alea/',
+};
 
 export default {
-	async fetch(request: Request, env: Env): Promise<Response> {
+	async fetch(request: Request): Promise<Response> {
 		const url = new URL(request.url);
+		const path = url.pathname.replace(/\/+$/, '') || '/';
 
-		if (url.pathname === '/robots.txt') {
+		if (path === '/robots.txt') {
 			return new Response(
-				`User-agent: *\nAllow: /\n\nSitemap: ${url.origin}/sitemap.xml\n`,
-				{ headers: { 'content-type': 'text/plain; charset=utf-8' } }
+				`User-agent: *\nAllow: /\n\n# braintail.ai has moved to positiveconstraint.com/braintail/\n`,
+				{ headers: { 'content-type': 'text/plain; charset=utf-8' } },
 			);
 		}
 
-		if (url.pathname === '/llms.txt') {
-			const asset = await env.ASSETS.fetch(new Request(new URL('/llms.txt', url.origin), request));
-			if (asset.ok) {
-				return new Response(asset.body, {
-					status: 200,
-					headers: {
-						'content-type': 'text/plain; charset=utf-8',
-						'cache-control': 'public, max-age=3600',
-						'access-control-allow-origin': '*',
-					},
-				});
-			}
+		const target = REDIRECT_MAP[path];
+		if (target) {
+			return Response.redirect(`${POSCON}${target}`, 301);
 		}
 
-		if (isAgent(request)) {
-			const filePath = resolvePath(url.pathname);
-			const asset = await env.ASSETS.fetch(new Request(new URL(filePath, url.origin), request));
-
-			if (asset.ok) {
-				return new Response(asset.body, {
-					status: 200,
-					headers: {
-						'content-type': 'text/markdown; charset=utf-8',
-						'cache-control': 'public, max-age=3600',
-						'access-control-allow-origin': '*',
-						'x-content-source': 'braintail-agent',
-					},
-				});
-			}
-
-			return new Response('# 404 — Not Found\n\nThis page does not exist. See [/llms.txt](/llms.txt) for the full index.\n', {
-				status: 404,
-				headers: { 'content-type': 'text/markdown; charset=utf-8' },
-			});
-		}
-
-		const asset = await env.ASSETS.fetch(new Request(new URL('/index.html', url.origin), request));
-		if (asset.ok) {
-			return new Response(asset.body, {
-				status: 200,
-				headers: {
-					'content-type': 'text/html; charset=utf-8',
-					'cache-control': 'public, max-age=3600',
-				},
-			});
-		}
-
-		return Response.redirect(`${HUMAN_URL}${url.pathname}`, 302);
+		return Response.redirect(`${POSCON}/braintail/`, 301);
 	},
-} satisfies ExportedHandler<Env>;
+} satisfies ExportedHandler;

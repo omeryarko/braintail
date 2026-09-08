@@ -47,3 +47,16 @@ review or presents page is added, it should appear in both repos.
 ## Domain
 
 braintail.ai — DNS managed in Cloudflare, pointed at this Worker.
+
+## Agent model selection
+
+**Default is haiku. You must explicitly justify sonnet or opus.**
+
+| Task type                                    | Model  |
+|----------------------------------------------|--------|
+| Read files, grep, ls, count, gather data     | haiku  |
+| Browser automation, UI checks, form filling  | haiku  |
+| Implementation, refactoring, debugging       | sonnet |
+| Architecture, novel debugging, cross-cutting | opus   |
+
+Rule: if you are about to write model="sonnet" for a read/search/count/browser task, change it to haiku.
